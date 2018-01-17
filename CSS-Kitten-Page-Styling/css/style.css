@@ -1,6 +1,7 @@
  .kitten-image {
         /* add CSS here */
-        border: 3px #fa8072 dashed;
+        border: 5px #fa8072 dashed;
+        border-radius: 5px;
         cursor: pointer;
         box-shadow: 7px 7px 28px 0px rgba(0, 0, 0, 0.4);
     }
