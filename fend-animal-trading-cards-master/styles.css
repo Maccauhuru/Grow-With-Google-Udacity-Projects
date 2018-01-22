@@ -1,0 +1,49 @@
+h3 {
+    margin-top: 1px;
+    margin-bottom: 10px;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border: 1px solid rgba(153, 148, 153, 1);
+    margin-bottom: 10px;
+}
+
+.container {
+    display: block;
+    text-align: center;
+    border: 1px solid rgba(153, 148, 153, 1);
+    width: 350px;
+    margin: auto;
+    box-shadow: 11px 9px 16px -4px rgba(153, 148, 153, 1);
+}
+
+.framed-text {
+    display: inline-block;
+    border: 1px solid rgba(153, 148, 153, 1);
+    padding: 2px 2px 2px 2px;
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+span {
+    font-weight: bold;
+    text-align: left;
+}
+
+li {
+    text-align: left;
+    list-style: none;
+}
+
+p {
+    display: block;
+    text-align: left;
+}
+
+ul {
+    padding: 0;
+    margin-left: 0px;
+}
