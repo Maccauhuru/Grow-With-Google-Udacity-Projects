@@ -1,9 +1,15 @@
+html {
+    background-color: #ADA996;
+}
+
 h1 {
-    padding-bottom: 1em;
+    padding-top: 0.0125em;
+    padding-bottom: 0.0125em;
 }
 
 img {
-    padding-bottom: 1em;
+    padding-bottom: 0em;
+    border: solid 1px grey;
 }
 
 #interesting-fact {
@@ -25,7 +31,7 @@ li {
 #container {
     display: block;
     text-align: center;
-    border: 1px solid rgba(153, 148, 153, 1);
+    border: 2px solid rgba(153, 148, 153, 1);
     width: 450px;
     margin: auto;
     box-shadow: 11px 9px 16px -4px rgba(153, 148, 153, 1);
@@ -34,5 +40,16 @@ li {
 
 .animal-info {
     text-align: center;
-    border: 1px solid rgba(153, 148, 153, 1);
+    border: 2px solid rgba(153, 148, 153, 1);
+    padding-top: 1em;
+}
+
+#facts {
+    display: block;
+    text-align: left;
+    padding-left: 7em;
+}
+
+#summary {
+    text-align: left;
 }
