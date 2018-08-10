@@ -1,0 +1,236 @@
+/*You will have to find the font sizes, line spacing, margins/padding on your own.
+*/
+/** {
+  border: 1px solid red !important;
+}*/
+
+
+/* TO DO: have one row be the header and everything beneath it be another row
+...columns wrap in bootstrap...read about the bootstrap grid for columns and how to write your divs*/
+
+* {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+/*@media only screen and (max-width: 300px) {
+  p{
+    background-color: blue;
+  }
+}*/
+
+/*.grid {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}*/
+
+body {
+
+   font-family: Verdana, sans-serif; 
+}
+
+.container {
+    width: 1024px;
+}
+
+.header {
+    width:100%;
+    text-align: center;
+    margin-top: 45px;
+}
+
+.img-container {
+    width: 375px;
+    height: 120px;
+    margin-left: 45px;
+}
+
+/* resize image */
+.img-container img {
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 43px;
+    color: #666666;
+    margin-left: 5px;
+}
+
+h2 {
+    font-weight: bold;
+    margin-top: -1px;
+    color: #F07C17; 
+}
+
+h2.left-title {
+    margin-top: 7px;
+    margin-left: 6px;
+}
+
+p {
+  color: #666666;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  line-height: 2em;
+  padding: 0px;
+}
+
+p.one {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  line-height: 2em;
+  padding: 0px; 
+}
+
+p.two {
+  margin-top: 0px;
+}
+
+p.three {
+  margin-top: -3px;
+  width: 535px;
+}
+
+.left-column {
+    width: 200px;
+    /*position: absolute;*/
+    float: left;
+}
+
+.right-column {
+    width: 534px;
+    margin-left: 445px;
+    margin-top: 0px;
+}
+
+.lower-left-column {
+    width:375px;
+    height: 225px;
+    float: left;
+    margin-left: -1px;
+    margin-top: 26px;
+    padding: 20px 20px 20px 20px;
+    color: #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+}
+
+ul {
+    margin-top: 30px;
+    margin-left: 7px;
+}
+
+li {
+    line-height: 2em;
+}
+
+/*body {
+   font-family: Verdana, sans-serif; 
+}
+
+.grid {
+    width: 600px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.row {
+  width: 100%;
+}
+
+.header {
+   text-align: center;
+
+}
+
+.left-column{
+    width: 200px;
+    float: left;
+}
+
+.right-column{
+   width: 400px;
+   margin-left: 200px;
+    
+}*/
+
+
+/*.col-1{
+width: 16.66%;
+}
+
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 { 
+ width: 33.33%;
+}
+
+.col-5 {
+width: 41.66%;
+}
+
+.col-6{
+width: 50%;
+}
+
+.col-7{
+width: 58.33%;
+}
+
+.col-8{
+width: 66.66%;
+}
+
+.col-9{
+width: 75%;
+}
+
+.col-10{
+width: 83%;
+}
+
+.col-11{
+width: 91.66%;
+}
+
+.col-12 {
+ width: 100%;
+}
+
+h1 {
+  color: #666666;
+}
+
+h2 {
+  color: #F07C17; 
+}
+
+img {
+     display: inline;
+}
+
+p {
+  color: #666666;
+}*/
+
+
+.mockup-overlay {
+     top: 0;
+     position: absolute;
+     z-index: -1;
+     opacity: .4;
+  }
+
+
+/*border around box under image*/
+color: #CCCCCC;
+border-style: solid;
+border-width: 1px;

@@ -25,3 +25,17 @@ eatsPlants && eatsAnimals ? (category = "omnivore") : undefined;
 !eatsPlants && !eatsAnimals ? (category = undefined) : undefined;
 
 console.log(category);
+
+
+
+// Alternative solution 
+
+ var eatsPlants = false;
+ var eatsAnimals = false;
+
+ var category = eatsPlants && eatsAnimals ? "omnivore" 
+              : eatsPlants && !eatsAnimals ? "herbivore" 
+              : !eatsPlants && eatsAnimals ? "carnivore" 
+              : undefined;
+
+ console.log(category);

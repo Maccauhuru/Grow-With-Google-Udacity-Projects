@@ -1,0 +1,234 @@
+        html {
+        	box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+        	box-sizing: inherit;
+        }
+
+        body {
+        	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+        	min-width: 350px;
+        }
+
+        a {
+        	color: white;
+        	text-decoration: none;
+        }
+
+        h1 {
+        	text-align: right;
+        	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+        	font-weight: 300;
+        	text-transform: uppercase;
+        	line-height: 0px;
+        }
+
+        h2 {
+        	text-align: center;
+        	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+        	font-weight: 300;
+        	font-size: 20px;
+        	text-transform: uppercase;
+        	margin: auto;
+        }
+
+        h3 {
+        	text-align: left;
+        	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+        	font-weight: 300;
+        	color: #7D97AD;
+        	font-size: 2rem;
+        	margin-bottom: 10px;
+        	margin-top: 30px;
+        }
+
+        p {
+        	font-size: 14px;
+        	margin: auto;
+        	word-wrap: break-word;
+        }
+
+        .bodydiv {
+        	padding-top: 30px;
+        	max-width: 1000px;
+        	min-width: 350px;
+        	margin: auto;
+        }
+
+        .topNav {
+        	max-width: 1000px;
+        	width: 100%;
+        	display: inline-block;
+        }
+
+        .logo {
+        	display: block;
+        	max-width: 100px;
+        	min-width: 70px;
+        	float: left;
+        }
+
+        .subhead {
+        	text-align: right;
+        	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+        	font-weight: 400;
+        	font-size: 17px;
+        	text-transform: uppercase;
+        }
+
+        .headline {
+        	text-align: right;
+        	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+        	font-weight: 300;
+        	text-transform: uppercase;
+        	line-height: 0px;
+        	font-size: 30px;
+        }
+
+        hr {
+        	height: 3px;
+        	background-color: #7d97ad;
+        	border: 0;
+        	max-width: 1000px;
+        }
+
+        .heroImage {
+        	padding-top: 20px;
+        	max-width: 1000px;
+        	width: 100%;
+        }
+
+        .featuredWork {
+        	margin: auto;
+        }
+
+        #mainName {
+        	float: right;
+        	text-align: right;
+        	line-height: 25px;
+        	padding-top: 25px;
+        }
+
+        #needsMargin {
+        	margin-right: 2%;
+        	margin-left: 0;
+        	float: left;
+        	width: 32%;
+        	display: block;
+        	padding-bottom: 20px;
+        }
+
+        #needsMargin img {
+        	width: 100%;
+        	padding-bottom: 20px;
+        	display: block;
+        }
+
+        #needsMargin2 {
+        	margin-right: 2%;
+        	margin-left: 0;
+        	float: left;
+        	width: 32%;
+        	display: block;
+        	padding-bottom: 20px;
+        }
+
+        #needsMargin2 img {
+        	width: 100%;
+        	padding-bottom: 20px;
+        	display: block;
+        }
+
+        #Brokeh {
+        	float: left;
+        	width: 32%;
+        	display: block;
+        	margin: auto;
+        }
+
+        #Brokeh img {
+        	width: 100%;
+        	padding-bottom: 20px;
+        	display: block;
+        }
+
+        .button {
+        	background-color: #000000;
+        	color: white;
+        	padding: 3%;
+        	width: 60%;
+        	margin-top: 5%;
+        }
+
+        .button:hover {
+        	background-color: #88E3E6;
+        	color: #000;
+        	-webkit-transition: .2s;
+        	/* Safari */
+        	transition: .2s;
+        }
+
+        .button2 {
+        	border: solid 1px #000000;
+        	color: #000000;
+        	padding: 3%;
+        	width: 60%;
+        	margin-top: 5%;
+        }
+
+        .button2:hover {
+        	border-color: #88E3E6;
+        	color: #000;
+        	-webkit-transition: .2s;
+        	/* Safari */
+        	transition: .2s;
+        }
+
+        @media (max-width: 700px) {
+        	.logo {
+        		float: none;
+        		margin: auto;
+        		width: 80px;
+        	}
+        	#mainName {
+        		margin: auto;
+        		float: none;
+        		text-align: center;
+        		padding-bottom: 20px;
+        	}
+        	.topNav {
+        		display: inline-block;
+        	}
+        	.featuredWork {
+        		width: 100%;
+        		margin: auto;
+        	}
+        	#needsMargin {
+        		box-sizing: border-box;
+        		float: none;
+        		width: 100%;
+        		display: inherit;
+        	}
+        	#needsMargin2 {
+        		box-sizing: border-box;
+        		float: none;
+        		margin: auto;
+        		width: 100%;
+        		display: inherit;
+        	}
+        	#Brokeh {
+        		box-sizing: border-box;
+        		float: none;
+        		width: 100%;
+        		display: inherit;
+        	}
+        	h3 {
+        		text-align: center;
+        	}
+        	img {
+        		width: 100%;
+        	}
+        }
