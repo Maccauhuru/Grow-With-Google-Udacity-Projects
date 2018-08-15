@@ -3,20 +3,25 @@ const gulp = require("gulp");
 const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
 const eslint = require("gulp-eslint");
-const jasmine = require("gulp-jasmine-phantom");
+const concat = require("gulp-concat");
+const uglify = require("gulp-uglify");
 
 const paths = {
     styles: {
         src: "scss/**/*.scss",
-        dest: "css"
+        dest: "dist/css"
     },
     scripts: {
         src: "scripts/**/*.js",
-        dest: "js"
+        dest: "dist/js"
     },
-    tests:{
-        src:"tests/index.test.js",
-        vendor:"js/**/*.js"
+    html: {
+        src : "./index.html",
+        dest : "dist/"
+    },
+    images:{
+        src:"img/*",
+        dest:"dist/img"
     }
     
 };
@@ -30,11 +35,20 @@ gulp.task("styles",()=>{
 
 gulp.task("scripts", () => {
     return gulp.src(paths.scripts.src)
+        .pipe(concat("all.js"))
+        .pipe(gulp.dest(paths.scripts.dest));
+});
+
+gulp.task("scripts-dist", () => {
+    return gulp.src(paths.scripts.src)
+        .pipe(concat("all.js"))
+        .pipe(uglify())
         .pipe(gulp.dest(paths.scripts.dest));
 });
 
 gulp.task("default",()=>{
-    return gulp.watch([paths.styles.src,paths.scripts.src],gulp.series("styles","lint","scripts"));
+    return gulp.watch([paths.images.src,paths.html.src,paths.styles.src, paths.scripts.src ]
+        ,gulp.series("copy-images","copy-html","styles","lint","scripts"));
 });
 
 gulp.task("lint", () => {
@@ -44,11 +58,20 @@ gulp.task("lint", () => {
         .pipe(eslint.failAfterError());
 });
 
-gulp.task("tests",()=>{
-    return gulp.src(paths.tests.src)
-        .pipe(jasmine({
-            integration : true,
-            vendor: paths.tests.vendor
-        }));    
+gulp.task("copy-html", () => {
+    return gulp.src(paths.html.src)
+        .pipe(gulp.dest(paths.html.dest));
+});
+
+gulp.task("copy-images", () => {
+    return gulp.src(paths.images.src)
+        .pipe(gulp.dest(paths.images.dest));
+});
+
+//production task
+
+gulp.task("dist",(done)=>{
+    done();
+    return ["copy-images", "copy-html", "styles", "lint", "scripts-dist"];
 });
 
