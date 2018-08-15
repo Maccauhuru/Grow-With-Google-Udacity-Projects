@@ -1,6 +1,9 @@
-const name = "Simba";
-const alertName =()=> {
-    return alert(name);
-};
+confirm("test js file...");
 
-alertName();
+//add two numbers
+
+function addNumbers (a,b) {
+    return a + b;
+}
+
+addNumbers(10,20);
