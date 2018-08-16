@@ -2,8 +2,8 @@ confirm("test js file...");
 
 //add two numbers
 
-function addNumbers (a,b) {
-    return a + b;
-}
+const addNumbers = (a,b)=> {
+    return `${a} + ${b} total is ${a + b}`;
+};
 
 addNumbers(10,20);

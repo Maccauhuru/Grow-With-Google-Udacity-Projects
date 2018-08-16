@@ -1,9 +1,2 @@
-confirm("test js file...");
-
-//add two numbers
-
-function addNumbers (a,b) {
-    return a + b;
-}
-
-addNumbers(10,20);
+"use strict";confirm("test js file...");var addNumbers=function(t,r){return t+" + "+r+" total is "+(t+r)};addNumbers(10,20);
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRlc3QuanMiXSwibmFtZXMiOlsiY29uZmlybSIsImFkZE51bWJlcnMiLCJhIiwiYiJdLCJtYXBwaW5ncyI6ImFBQUFBLFFBQVEsbUJBSVIsSUFBTUMsV0FBYSxTQUFDQyxFQUFFQyxHQUNsQixPQUFVRCxFQUFWLE1BQWlCQyxFQUFqQixjQUErQkQsRUFBSUMsSUFHdkNGLFdBQVcsR0FBRyIsImZpbGUiOiJhbGwuanMiLCJzb3VyY2VzQ29udGVudCI6WyJjb25maXJtKFwidGVzdCBqcyBmaWxlLi4uXCIpO1xyXG5cclxuLy9hZGQgdHdvIG51bWJlcnNcclxuXHJcbmNvbnN0IGFkZE51bWJlcnMgPSAoYSxiKT0+IHtcclxuICAgIHJldHVybiBgJHthfSArICR7Yn0gdG90YWwgaXMgJHthICsgYn1gO1xyXG59O1xyXG5cclxuYWRkTnVtYmVycygxMCwyMCk7Il19

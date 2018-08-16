@@ -5,6 +5,10 @@ const autoprefixer = require("gulp-autoprefixer");
 const eslint = require("gulp-eslint");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
+const babel = require("gulp-babel");
+const sourcemaps = require("gulp-sourcemaps");
+const imagemin = require("gulp-imagemin");
+const pngquant = require("imagemin-pngquant");
 
 const paths = {
     styles: {
@@ -12,6 +16,10 @@ const paths = {
         dest: "dist/css"
     },
     scripts: {
+        src: "scripts/**/*.js",
+        dest: "js"
+    },
+    "scripts-dist": {
         src: "scripts/**/*.js",
         dest: "dist/js"
     },
@@ -35,15 +43,25 @@ gulp.task("styles",()=>{
 
 gulp.task("scripts", () => {
     return gulp.src(paths.scripts.src)
+        .pipe(sourcemaps.init())
+        .pipe(babel({
+            presets: ["env"]
+        }))
         .pipe(concat("all.js"))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(paths.scripts.dest));
 });
 
 gulp.task("scripts-dist", () => {
     return gulp.src(paths.scripts.src)
+        .pipe(sourcemaps.init())
+        .pipe(babel({
+            presets: ["env"]
+        }))
         .pipe(concat("all.js"))
         .pipe(uglify())
-        .pipe(gulp.dest(paths.scripts.dest));
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(paths["scripts-dist"].dest));
 });
 
 gulp.task("default",()=>{
@@ -65,6 +83,12 @@ gulp.task("copy-html", () => {
 
 gulp.task("copy-images", () => {
     return gulp.src(paths.images.src)
+        .pipe(imagemin(
+            {
+                progressive: true,
+                use: [pngquant()]
+            }
+        ))
         .pipe(gulp.dest(paths.images.dest));
 });
 
