@@ -1,36 +1,66 @@
-        const catdata = [{
+//Application Model
+        const data = [{
+                id : 0,
                 catName: "JJ Doom",
-                link: "img/cat.jpg",
+                link: "img/cat1.jpg",
+                clickCount : 0,
+                currentCat : true   
             },
             {
+                id : 1,
                 catName: "MF Doom",
-                link: "img/cat2.jpg"
-            }
+                link: "img/cat2.jpg",
+                clickCount : 0,
+                currentCat : false
+            },
+            {
+                id : 2,
+                catName: "Stark Doom",
+                link: "img/cat3.jpg",
+                clickCount : 0,
+                currentCat: false
+            },
         ];
 
-        //Set Cat Names
-        const cat1 = document.getElementById('catname1');
-        const cat2 = document.getElementById('catname2');
-        cat1.innerHTML = catdata[0].catName;
-        cat2.innerHTML = catdata[1].catName;
+//Query Selectors
+let navigation = $('ul.catNavItems');
+let catView = $('#catView');
+let catItems = $('.catItems');
 
-        //Set Cat Pics
-        const catPic1 = document.getElementById('catpic1');
-        const catPic2 = document.getElementById('catpic2');
+//Display the first view : Cat Navigation List
+displayCatList=()=>{
+data.forEach(cat => navigation.append("<li>"+"<a href='#' onclick=setCurrentCat("+cat.id+")>"
+                    +cat.catName+"</a></li>"));
+}
 
-        //Add Click Events
-        const counter1 = document.getElementById('counter1');
-        const counter2 = document.getElementById('counter2');
-        let cat1counter = 0;
-        let cat2counter = 0;
+//Make currentCats be false for all cats
+disableCurrentCats=()=>{
+    data.forEach(cat => cat.currentCat = false);
+}
 
-        catPic1.addEventListener('click',()=>{
-        cat1counter +=1
-        counter1.innerHTML=cat1counter;
-        },false);
+//change currentCat in model
+setCurrentCat=(id)=>{
+    disableCurrentCats();
+    data[id].currentCat = true;
+    displayCats(id);
+}
 
-        catPic2.addEventListener('click',()=>{
-        cat2counter +=1
-        counter2.innerHTML=cat2counter;
-        },false);
-     
+//Display the second view : Current Active Cat
+displayCats=(catID)=>{
+catView.empty();
+let displayCatView = 
+             "<div class='catItems'>"+"<h3 class='catName'>"+data[catID].catName+"</h3>"
+            +"<div class='cat-images'>"+"<img src='./"+data[catID].link+"'onclick='countCatClicks("
+            +data[catID].id+")'"+">"+"<p>Click Count :"+ data[catID].clickCount+"</p>"+"</div></div>"
+catView.append(displayCatView);
+}
+
+//increase cat clicks in view
+ countCatClicks=(id)=>{
+    data[id].clickCount++;
+    displayCats(id);
+}
+
+//Initial Load
+displayCatList();
+displayCats(0);
